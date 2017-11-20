@@ -383,13 +383,13 @@ let g:syntastic_style_warning_symbol='x'
 let g:syntastic_python_checkers=['flake8', 'pydocstyle', 'python']
 
 " YouCompleteMe
-set completeopt-=preview
+"set completeopt-=preview
 
-let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf=0
-
-nmap <leader>g :YcmCompleter GoTo<CR>
-nmap <leader>d :YcmCompleter GoToDefinition<CR>
+"let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
+"let g:ycm_confirm_extra_conf=0
+"
+"nmap <leader>g :YcmCompleter GoTo<CR>
+"nmap <leader>d :YcmCompleter GoToDefinition<CR>
 
 let g:ale_sign_column_always = 0
 let g:ale_emit_conflict_warnings = 0                                                                         
@@ -408,29 +408,4 @@ let g:syntastic_check_on_wq = 0
 
 imap <F5> <Esc>:w<CR>:!clear;python %<CR>
 
-no <down> <Nop>
-no <left> <Nop>
-no <right> <Nop>
-no <up> <Nop>
 
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
-
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
-vno <up> <Nop>
-
-python3 << EOF
-import vim
-import git
-def is_git_repo():
-	try:
-		_ = git.Repo('.', search_parent_directories=True).git_dir
-		return "1"
-	except:
-		return "0"
-vim.command("let g:pymode_rope = " + is_git_repo())
-EOF
