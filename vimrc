@@ -78,7 +78,6 @@ Plugin 'tpope/vim-commentary'               " Comment stuff out
 Plugin 'scrooloose/nerdcommenter'           " Easy code documentation
 Plugin 'mitsuhiko/vim-sparkup'              " Sparkup(XML/jinja/htlm-django/etc.) support
 Plugin 'Rykka/riv.vim'                      " ReStructuredText plugin
-Plugin 'Valloric/YouCompleteMe'             " Autocomplete plugin
 Plugin 'w0rp/ale'
 
 "-------------------=== Python  ===-----------------------------
