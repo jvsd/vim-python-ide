@@ -38,16 +38,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/jarolrod/vim-python-ide/ma
 ```
 curl -fsSL https://raw.githubusercontent.com/jarolrod/vim-python-ide/master/setup.sh | sh       
 ```
-### Compile YCM
- * The YouCompleteMe Plugin must be compiled before use:
-   * Navigate to the YouCompleteMe Folder which is found in:
-     ```
-     cd .vim/bundle/YouCompleteMe/
-     ```
-   * Next execute the following command:
-     ```
-     ./install.sh --clang-completer --system-libclang    
-     ```
 ### Base16 (Optional)
 Base16 is used to theme vim, it can also theme your terminal. Follow these steps to install:
 * Installing Base16
@@ -117,8 +107,6 @@ This plugin is used to show file icons in NerdTree and requires additional steps
 * [Jinja](https://github.com/lepture/vim-jinja) - Syntax and Indentation
 * [Syntastic](https://github.com/vim-syntastic/syntastic) - Syntax
 * [Python Combined](https://github.com/mitsuhiko/vim-python-combined) - Extra handling
-* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - Code auto-completion
-  * [Compile YCM](#compile-ycm)
 
 ### Code and Project Navigation
 * [NerdTree](https://github.com/scrooloose/nerdtree) - Project and File navigation
@@ -187,22 +175,5 @@ nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_imp 
 * NerdTree wil automatically open when vim is launched in terminal without a file
 ```
 nmap " :NERDTreeToggle<CR>
-```
-### Disable Arrow Keys
-```
-no <down> <Nop>
-no <left> <Nop>
-no <right> <Nop>
-no <up> <Nop>
-
-ino <down> <Nop>
-ino <left> <Nop>
-ino <right> <Nop>
-ino <up> <Nop>
-                                                                               
-vno <down> <Nop>
-vno <left> <Nop>
-vno <right> <Nop>
-vno <up> <Nop>
 ```
 
