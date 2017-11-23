@@ -104,8 +104,8 @@ set encoding=utf-8
 let base16colorspace=256
 set t_Co=256                                " 256 colors
 set guifont=mononoki\ Nerd\ Font\ 18
-colorscheme base16-default-dark             " set vim colorscheme
-let g:airline_theme='base16_spacemacs'             " set airline theme
+colorscheme osx_like             " set vim colorscheme
+let g:airline_theme='sierra'             " set airline theme
 syntax enable                               " enable syntax highlighting
 
 
@@ -144,8 +144,8 @@ set secure                                  " prohibit .vimrc files to execute s
 tab sball
 set switchbuf=useopen
 set laststatus=2
-nmap <F9> :bprev<CR>
-nmap <F10> :bnext<CR>
+nmap { :bprev<CR>
+nmap } :bnext<CR>
 nmap <silent> <leader>q :SyntasticCheck # <CR> :bp <BAR> bd #<CR>
 
 "=====================================================
@@ -191,6 +191,7 @@ let g:tagbar_autofocus=0
 let g:tagbar_width=42
 autocmd BufEnter *.py :call tagbar#autoopen(0)
 autocmd BufWinLeave *.py :TagbarClose
+nmap \ :TagbarToggle<CR>
 
 "=====================================================
 "" NERDTree settings
